@@ -12,6 +12,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import pages.CompaniesProfile;
 import pages.MainPage;
 
 public class TestNFJ extends Base implements IConstans {
@@ -61,6 +62,19 @@ public class TestNFJ extends Base implements IConstans {
     public void checkFilters(){
         //to do
     }
+
+    @Test
+    public void switchPageToTheCompany(){
+        CompaniesProfile nfj = new CompaniesProfile(driver, wait);
+        nfj.switchJobOffersPageToTheCompaniesPage();
+        nfj.checkCompaniesFilter("Epam Systems");
+    }
+
+    /*@Test
+    public void checkCompaniesFilters(){
+        CompaniesProfile nfj = new CompaniesProfile(driver, wait);
+
+    }*/
 
     @AfterTest
     private void end() {
