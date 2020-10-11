@@ -100,4 +100,12 @@ public class MainPage extends Base {
 
     }
 
+    public void checkMapButton(){
+        //to do
+    }
+
+    public void checkFilterBar(){
+        //to do
+    }
+
 }
