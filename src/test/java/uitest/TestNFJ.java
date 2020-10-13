@@ -14,6 +14,7 @@ import org.testng.annotations.Test;
 
 import pages.CompaniesProfile;
 import pages.MainPage;
+import pages.MasretClass;
 
 public class TestNFJ extends Base implements IConstans {
 
@@ -75,6 +76,12 @@ public class TestNFJ extends Base implements IConstans {
         CompaniesProfile nfj = new CompaniesProfile(driver, wait);
 
     }*/
+
+    @Test
+    public void titleMasterClassOnThePage(){
+        MasretClass nfj = new MasretClass(driver, wait);
+        assertTrue(nfj.isMasterClassTitleApsent());
+    }
 
     @AfterTest
     private void end() {
