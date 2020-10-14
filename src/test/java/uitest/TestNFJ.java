@@ -13,6 +13,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import pages.CompaniesProfile;
+import pages.Employers;
 import pages.MainPage;
 import pages.MasretClass;
 
@@ -81,6 +82,17 @@ public class TestNFJ extends Base implements IConstans {
     public void titleMasterClassOnThePage(){
         MasretClass nfj = new MasretClass(driver, wait);
         assertTrue(nfj.isMasterClassTitleApsent());
+    }
+
+    @Test
+    public void changeEmployeeTab(){
+
+    }
+
+    @Test
+    public void employeeLogoTest(){
+        Employers nfj = new Employers(driver, wait);
+        assertTrue(nfj.isNoFluffEmployee());
     }
 
     @AfterTest
