@@ -9,8 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.List;
 
 public class Employers extends Base {
-
-    public static final String ILO = "Ilo";
+    
     private WebElement changeEmployeePage;
     private WebElement checkEmployeePage;
     private WebElement priceTab;

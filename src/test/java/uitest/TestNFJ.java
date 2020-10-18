@@ -12,10 +12,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import pages.CompaniesProfile;
-import pages.Employers;
-import pages.MainPage;
-import pages.MasretClass;
+import pages.*;
 
 public class TestNFJ extends Base implements IConstans {
 
@@ -27,7 +24,7 @@ public class TestNFJ extends Base implements IConstans {
     private void setUp() {
         driver = initializeDriver();
         wait = getWait();
-        driver.get("https://nofluffjobs.com/");
+        driver.get("https://nofluffjobs.com/employers/pricing/");
     }
 
 
@@ -93,6 +90,12 @@ public class TestNFJ extends Base implements IConstans {
     public void employeeLogoTest(){
         Employers nfj = new Employers(driver, wait);
         assertTrue(nfj.isNoFluffEmployee());
+    }
+
+    @Test
+    public void testPriceList(){
+        PricingList pr = new PricingList();
+        pr.checkValueResult();
     }
 
     @AfterTest
