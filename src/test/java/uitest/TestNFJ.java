@@ -94,7 +94,9 @@ public class TestNFJ extends Base implements IConstans {
 
     @Test
     public void testPriceList(){
-        PricingList pr = new PricingList();
+        //PricingList pr = new PricingList(driver, wait);
+        //PricingList2 pr = new PricingList2(driver, wait);
+        PricingList3 pr = new PricingList3(driver, wait);
         pr.checkValueResult();
     }
 
