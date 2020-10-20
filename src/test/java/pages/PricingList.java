@@ -13,6 +13,11 @@ import static org.testng.Assert.assertEquals;
 
 public class PricingList extends MainPage {
 
+    /**
+     * This class has junior level writing technique
+     * Simple structure - get
+     * Simple HashMap - ExpectedResults and ActualResults
+     */
     //get - public
     //set - private
 

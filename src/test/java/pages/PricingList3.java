@@ -15,6 +15,14 @@ public class PricingList3 extends MainPage {
         super(driver, wait);
     }
 
+    /**
+     * This class has advanced level writing technique
+     * static final has - ('%s'). This  makes it possible to substitute values and compare them, used
+     * two HashMap - ExpectedResults and ActualResults
+     * two methods with static final
+     * return new HashMap<>(){{ realization }}
+     */
+
     public static final String KEY_ELEMENT = "//div[@class='title-box']//h3[contains(., '%s')]";
     public static final String PRICE_ELEMENT = "//div[@class='nfj-pricing-table']//h4[contains(., '%s')]";
 

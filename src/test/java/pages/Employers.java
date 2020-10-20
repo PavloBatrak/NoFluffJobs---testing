@@ -8,19 +8,17 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
-public class Employers extends Base {
-    
+public class Employers extends MainPage {
+
     private WebElement changeEmployeePage;
     private WebElement checkEmployeePage;
     private WebElement priceTab;
 
 
-    public Employers(WebDriver driver, WebDriverWait wait){
-        this.driver = driver;
-        this.wait = wait;
-    }
+    public Employers(WebDriver driver, WebDriverWait wait) { super(driver, wait); }
 
-    public void switchToTheEmployeePage(){
+
+    public void switchToTheEmployeePage() {
         changeEmployeePage = driver.findElement(By.xpath("//a[@href][contains(., 'dla pracodawcy')]"));
         changeEmployeePage.click();
         // click price tab
@@ -40,7 +38,7 @@ public class Employers extends Base {
 
     }
 
-    public boolean isNoFluffEmployee(){
+    public boolean isNoFluffEmployee() {
         changeEmployeePage = driver.findElement(By.xpath("//a[@href][contains(., 'dla pracodawcy')]"));
         changeEmployeePage.click();
         // po wykorzystaniu switchToTheEmployeePage satrona ma inny xpath!! temu changeEmployeePage nie pracuje
