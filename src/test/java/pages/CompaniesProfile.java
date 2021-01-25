@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class CompaniesProfile extends Base {
+public class CompaniesProfile extends MainPage {
 
     private WebElement switchTab;
     private WebElement trueCompaniesPage;
@@ -17,10 +17,7 @@ public class CompaniesProfile extends Base {
     private WebElement applyButtonClick;
 
 
-    public CompaniesProfile(WebDriver driver, WebDriverWait wait){
-        this.driver = driver;
-        this.wait = wait;
-    }
+    public CompaniesProfile(WebDriver driver, WebDriverWait wait){ super(driver, wait); }
 
     public void switchJobOffersPageToTheCompaniesPage (){
 

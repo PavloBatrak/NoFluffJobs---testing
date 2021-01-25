@@ -9,23 +9,20 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.Iterator;
 import java.util.Set;
 
-public class MasretClass extends Base {
+public class MasretClass extends MainPage {
 
     private WebElement titleMasterClass;
     private WebElement changeMasterClassTab;
 
-    public MasretClass(WebDriver driver, WebDriverWait wait){
-        this.driver = driver;
-        this.wait = wait;
-    }
+    public MasretClass(WebDriver driver, WebDriverWait wait) { super(driver, wait); }
 
-    public boolean isMasterClassTitleApsent(){
+    public boolean isMasterClassTitleApsent() {
         changeMasterClassTab = driver.findElement(By.xpath("//a[@href='/masterclazz']"));
         changeMasterClassTab.click();
         System.out.println(driver.getTitle());
         Set<String> ids = driver.getWindowHandles();
         Iterator<String> it = ids.iterator();
-        String parentTab = it.next();
+        //String parentTab = it.next();
         String childTab = it.next();
         driver.switchTo().window(childTab);
         System.out.println(driver.getTitle());

@@ -14,6 +14,12 @@ public class PricingList2 extends MainPage {
     //get - public
     //set - private
 
+    /**
+     * This class has middle level writing technique
+     * methods which have immediately include element initialization
+     * return new HashMap<>(){{ realization }}
+     */
+
 
     public PricingList2(WebDriver driver, WebDriverWait wait) {
         super(driver, wait);
