@@ -61,6 +61,7 @@ public class PricingList3 extends MainPage {
 
     public void checkValueResult() {
         assertEquals(actualResults(), getExpectedResults());
+        driver.quit();
     }
 
 

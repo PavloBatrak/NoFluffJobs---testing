@@ -28,7 +28,7 @@ public class TestNFJ extends Base implements IConstans {
     }
 
 
-    @Test
+    @Test(groups = {"simpleTest"})
     public void mainTestLogo() {
         MainPage nfj = new MainPage(driver, wait);
         assertTrue(nfj.isNoFluffJobs());
@@ -92,7 +92,7 @@ public class TestNFJ extends Base implements IConstans {
         assertTrue(nfj.isNoFluffEmployee());
     }
 
-    @Test
+    @Test(groups = {"simpleTest"})
     public void testPriceList(){
         //PricingList pr = new PricingList(driver, wait);
         //PricingList2 pr = new PricingList2(driver, wait);
